@@ -1,7 +1,7 @@
 package bolsaempleo.repository;
 import bolsaempleo.model.Empresa;
 import bolsaempleo.model.Puesto;
-import com.bolsaempleo.model.*;
+import bolsaempleo.model.*;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

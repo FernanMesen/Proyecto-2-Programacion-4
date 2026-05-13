@@ -2,8 +2,8 @@ package bolsaempleo.controller;
 
 import bolsaempleo.model.*;
 import bolsaempleo.repository.*;
-import com.bolsaempleo.model.*;
-import com.bolsaempleo.repository.*;
+import bolsaempleo.model.*;
+import bolsaempleo.repository.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

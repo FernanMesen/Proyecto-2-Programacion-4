@@ -6,7 +6,6 @@ import org.springframework.web.servlet.config.annotation.*;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    /** CORS para desarrollo con Vite en puerto 5173 */
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
@@ -16,7 +15,6 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowCredentials(false);
     }
 
-    /** Sirve archivos estáticos de la carpeta uploads/cv */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/api/cv/**")

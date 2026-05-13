@@ -2,7 +2,7 @@ package bolsaempleo.repository;
 import bolsaempleo.model.Aplicacion;
 import bolsaempleo.model.Oferente;
 import bolsaempleo.model.Puesto;
-import com.bolsaempleo.model.*;
+import bolsaempleo.model.*;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 public interface AplicacionRepository extends JpaRepository<Aplicacion,Long> {

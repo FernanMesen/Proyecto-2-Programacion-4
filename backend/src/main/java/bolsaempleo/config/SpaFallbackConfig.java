@@ -10,10 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- * Redirige todas las rutas desconocidas al index.html de React
- * para que React Router maneje el enrutamiento del lado del cliente.
- */
+
 @Configuration
 public class SpaFallbackConfig {
 

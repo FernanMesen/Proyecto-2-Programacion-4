@@ -7,8 +7,8 @@ import bolsaempleo.repository.CaracteristicaRepository;
 import bolsaempleo.repository.EmpresaRepository;
 import bolsaempleo.repository.OferenteRepository;
 import bolsaempleo.repository.UsuarioRepository;
-import com.bolsaempleo.model.*;
-import com.bolsaempleo.repository.*;
+import bolsaempleo.model.*;
+import bolsaempleo.repository.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

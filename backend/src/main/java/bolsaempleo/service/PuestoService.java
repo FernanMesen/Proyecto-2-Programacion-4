@@ -2,8 +2,8 @@ package bolsaempleo.service;
 
 import bolsaempleo.model.*;
 import bolsaempleo.repository.*;
-import com.bolsaempleo.model.*;
-import com.bolsaempleo.repository.*;
+import bolsaempleo.model.*;
+import bolsaempleo.repository.*;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
