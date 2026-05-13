@@ -5,7 +5,6 @@ import { getFriendlyErrorMessage } from "../../../shared/api/apiError.js";
 import { getCaracteristicasArbol } from "../../public/services/publicService.js";
 import { getMisHabilidades, guardarHabilidad, eliminarHabilidad } from "../services/oferenteService.js";
 
-// Aplanar árbol jerárquico para el select
 function aplanar(nodos, prefix = "") {
   let res = [];
   for (const n of nodos) {
@@ -72,7 +71,6 @@ export function MisHabilidadesPage() {
       <h1>⚙️ Mis Habilidades</h1>
 
       <div className="grid-2">
-        {/* Formulario */}
         <section className="card">
           <h2 style={{ marginTop: 0, fontSize: "1rem" }}>Agregar / Actualizar habilidad</h2>
           <Alert type="success">{success}</Alert>
@@ -105,7 +103,6 @@ export function MisHabilidadesPage() {
           </form>
         </section>
 
-        {/* Lista */}
         <section>
           <h2 style={{ marginTop: 0 }}>
             Habilidades registradas{" "}

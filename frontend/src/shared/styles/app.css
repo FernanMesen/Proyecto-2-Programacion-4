@@ -22,13 +22,11 @@ a {
   color: inherit;
 }
 
-/* ── Layout ─────────────────────────────────────── */
 .container {
   width: min(1100px, 92%);
   margin: 2rem auto;
 }
 
-/* ── Navbar ─────────────────────────────────────── */
 .navbar {
   background: #4771a3;
   color: white;
@@ -94,7 +92,6 @@ a {
   font-size: 0.9rem;
 }
 
-/* ── Page header ────────────────────────────────── */
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -103,7 +100,6 @@ a {
   margin-bottom: 1.5rem;
 }
 
-/* ── Cards ──────────────────────────────────────── */
 .card {
   background: #d3c8b4;
   border: 1px solid #bfb5a0;
@@ -120,7 +116,6 @@ a {
   margin-bottom: 1rem;
 }
 
-/* ── Tables ─────────────────────────────────────── */
 .table-wrapper {
   overflow-x: auto;
 }
@@ -147,7 +142,6 @@ a {
   background: rgba(0,0,0,0.03);
 }
 
-/* ── Forms ──────────────────────────────────────── */
 .form-layout {
   display: grid;
   gap: 1rem;
@@ -198,7 +192,6 @@ a {
   font-size: 0.88rem;
 }
 
-/* ── Buttons ─────────────────────────────────────── */
 .btn {
   display: inline-block;
   padding: 0.65rem 0.9rem;
@@ -232,7 +225,6 @@ a {
 .btn-danger    { background: #dc2626; color: white; }
 .btn-danger:hover    { background: #b91c1c; }
 
-/* ── Badges ─────────────────────────────────────── */
 .badge {
   display: inline-block;
   padding: 3px 10px;
@@ -248,7 +240,6 @@ a {
 .badge-inactivo { background: #e5e7eb; color: #6b7280; }
 .badge-info     { background: #dbeafe; color: #1e40af; }
 
-/* ── Alerts ─────────────────────────────────────── */
 .alert {
   padding: 0.8rem 1rem;
   border-radius: 8px;
@@ -259,7 +250,6 @@ a {
 .alert-success { background: #dcfce7; color: #166534; }
 .alert-info    { background: #dbeafe; color: #1e3a8a; }
 
-/* ── Auth ───────────────────────────────────────── */
 .auth-container {
   max-width: 480px;
 }
@@ -270,7 +260,6 @@ a {
   border-top: 1px solid #e5e7eb;
 }
 
-/* ── Stats grid ─────────────────────────────────── */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -298,7 +287,6 @@ a {
   margin-top: 4px;
 }
 
-/* ── Detail grid ────────────────────────────────── */
 .detail-grid {
   display: grid;
   gap: 0.8rem;
@@ -308,7 +296,6 @@ a {
   margin: 0;
 }
 
-/* ── Grid layout ─────────────────────────────────── */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -323,7 +310,6 @@ a {
   align-items: start;
 }
 
-/* ── Puestos cards grid ──────────────────────────── */
 .puestos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -343,7 +329,6 @@ a {
   background: #c4b79e;
 }
 
-/* ── Tooltip ─────────────────────────────────────── */
 .tooltip-wrap {
   position: relative;
   display: inline-block;
@@ -387,14 +372,12 @@ a {
   display: block;
 }
 
-/* ── Arbol ────────────────────────────────────────── */
 .arbol {
   font-size: 0.9rem;
   max-height: 400px;
   overflow-y: auto;
 }
 
-/* ── Modal ────────────────────────────────────────── */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -426,7 +409,6 @@ a {
   margin-top: 1.25rem;
 }
 
-/* ── Footer ───────────────────────────────────────── */
 .footer {
   background: #4771a3;
   color: white;
@@ -442,7 +424,6 @@ a {
   flex-wrap: wrap;
 }
 
-/* ── Misc ─────────────────────────────────────────── */
 .muted       { color: #6b7280; }
 .empty-state { color: #6b7280; padding: 1rem 0; }
 .check {
@@ -455,7 +436,6 @@ a {
   display: inline;
 }
 
-/* ── Responsive ───────────────────────────────────── */
 @media (max-width: 768px) {
   .navbar-inner,
   .page-header {

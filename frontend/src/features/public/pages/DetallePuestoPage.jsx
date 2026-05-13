@@ -64,7 +64,6 @@ export function DetallePuestoPage() {
       </p>
 
       <div className="grid-2">
-        {/* Info del puesto */}
         <div>
           <section className="card">
             <h1 style={{ marginTop: 0 }}>{puesto.descripcion}</h1>
@@ -105,7 +104,6 @@ export function DetallePuestoPage() {
           )}
         </div>
 
-        {/* Panel de aplicación */}
         <aside>
           <section className="card">
             <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>Aplicar a este puesto</h2>

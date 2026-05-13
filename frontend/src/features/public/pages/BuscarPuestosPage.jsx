@@ -16,7 +16,6 @@ export function BuscarPuestosPage() {
 
   useEffect(() => {
     getCaracteristicasArbol().then(setArbol).catch(console.error);
-    // Cargar todos los puestos al inicio
     setLoading(true);
     buscarPuestos()
       .then((data) => { setResultados(data); setBuscado(true); })
@@ -58,7 +57,6 @@ export function BuscarPuestosPage() {
       <h1>Buscar Puestos</h1>
 
       <div className="grid-sidebar">
-        {/* Panel de filtros */}
         <aside>
           <form className="card" onSubmit={handleBuscar}>
             <h2 style={{ marginTop: 0, fontSize: "1rem" }}>Características</h2>
@@ -80,7 +78,6 @@ export function BuscarPuestosPage() {
           </form>
         </aside>
 
-        {/* Resultados */}
         <section>
           <header className="page-header">
             <h2 style={{ margin: 0 }}>

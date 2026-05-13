@@ -39,10 +39,9 @@ export function BuscarCandidatosPage() {
     }
   }, [puestoId]);
 
-  // Auto-buscar si viene puestoId en la URL
   useEffect(() => {
     if (puestoIdParam) handleBuscar();
-  }, [puestoIdParam]); // eslint-disable-line
+  }, [puestoIdParam]);
 
   async function verDetalle(id) {
     setLoadingDetalle(true);
@@ -60,7 +59,6 @@ export function BuscarCandidatosPage() {
     <main className="container">
       <h1>🔍 Buscar Candidatos</h1>
 
-      {/* Selector de puesto */}
       <section className="card">
         <form className="actions" onSubmit={handleBuscar} style={{ alignItems: "flex-end" }}>
           <div className="field" style={{ flex: 1 }}>
@@ -84,7 +82,6 @@ export function BuscarCandidatosPage() {
 
       <Alert type="error">{error}</Alert>
 
-      {/* Resultados */}
       {loading ? (
         <Loading message="Buscando candidatos…" />
       ) : buscado && (
@@ -133,7 +130,6 @@ export function BuscarCandidatosPage() {
         </section>
       )}
 
-      {/* Modal detalle candidato */}
       {detalle && (
         <div className="modal-overlay" onClick={() => setDetalle(null)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>

@@ -65,7 +65,6 @@ export function NuevoPuestoPage() {
       <h1>➕ Publicar Nuevo Puesto</h1>
 
       <div className="grid-2">
-        {/* Formulario */}
         <section className="card">
           <Alert type="success">{success}</Alert>
           <Alert type="error">{error}</Alert>
@@ -104,7 +103,6 @@ export function NuevoPuestoPage() {
           </form>
         </section>
 
-        {/* Árbol de características */}
         <aside className="card">
           <h2 style={{ marginTop: 0, fontSize: "1rem" }}>Características requeridas</h2>
           <p className="muted" style={{ fontSize: "0.85rem" }}>

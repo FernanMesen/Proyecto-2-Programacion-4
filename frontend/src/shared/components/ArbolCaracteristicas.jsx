@@ -1,12 +1,4 @@
-/**
- * Árbol jerárquico de características reutilizable.
- * Props:
- *  - nodos: array de nodos con {id, nombre, esHoja, hijos}
- *  - seleccionadas: { [id]: { nivel: number } }
- *  - onToggle: (id) => void
- *  - onNivel:  (id, nivel) => void
- *  - modoSeleccion: boolean (muestra checkboxes y selects de nivel)
- */
+
 export function ArbolCaracteristicas({ nodos = [], seleccionadas = {}, onToggle, onNivel, modoSeleccion = false }) {
   return (
     <div className="arbol">

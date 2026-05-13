@@ -28,7 +28,6 @@ export function Navbar() {
                     </Link>
                 </div>
 
-                {/* Centro — links de navegación */}
                 <div className="nav-links">
                     <Link to="/buscar">Buscar puestos</Link>
 
@@ -59,7 +58,6 @@ export function Navbar() {
                     )}
                 </div>
 
-                {/* Derecha — login / usuario */}
                 <div className="nav-user" style={{ justifyContent: "flex-end" }}>
                     {isAuthenticated ? (
                         <>
