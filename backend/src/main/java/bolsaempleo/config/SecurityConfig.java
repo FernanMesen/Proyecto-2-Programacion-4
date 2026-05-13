@@ -52,20 +52,14 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
-                // Públicos
                 .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/auth/registro/**").permitAll()
                 .requestMatchers(HttpMethod.GET,  "/api/public/**").permitAll()
                 .requestMatchers(HttpMethod.GET,  "/api/cv/**").permitAll()
-                // Empresa
                 .requestMatchers("/api/empresa/**").hasRole("EMPRESA")
-                // Oferente
                 .requestMatchers("/api/oferente/**").hasRole("OFERENTE")
-                // Admin
                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                // React SPA assets
                 .requestMatchers("/", "/index.html", "/assets/**", "/favicon.ico").permitAll()
-                // Todo lo demás requiere autenticación
                 .anyRequest().authenticated()
             )
             .authenticationProvider(authProvider())

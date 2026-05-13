@@ -4,7 +4,7 @@ import java.util.List;
 public class NuevoPuestoRequest {
     private String descripcion;
     private BigDecimal salario;
-    private String tipo; // PUBLICO | PRIVADO
+    private String tipo;
     private List<ReqCaracteristica> caracteristicas;
     public static class ReqCaracteristica {
         private Long caracteristicaId;
