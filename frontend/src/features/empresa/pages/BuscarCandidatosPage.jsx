@@ -157,7 +157,7 @@ export function BuscarCandidatosPage() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Ver CV (PDF)
+                  📄Ver CV (PDF)
                 </a>
               </div>
             )}

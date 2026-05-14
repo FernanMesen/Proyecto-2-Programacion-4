@@ -78,7 +78,7 @@ export function MisPuestosPage() {
                   className={`btn btn-sm ${p.activo ? "btn-danger" : "btn-success"}`}
                   onClick={() => handleToggle(p)}
                 >
-                  {p.activo ? "Desactivar" : "Activar"}
+                  {p.activo ? "❌Desactivar" : "✅Activar"}
                 </button>
               </div>
             </div>

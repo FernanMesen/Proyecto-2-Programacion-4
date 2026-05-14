@@ -73,7 +73,7 @@ export function MiCVPage() {
           </div>
 
           <button type="submit" className="btn btn-primary" disabled={loading}>
-            {loading ? "Subiendo…" : "Subir CV"}
+            {loading ? "Subiendo…" : "📄Subir CV"}
           </button>
         </form>
       </section>

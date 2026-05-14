@@ -122,3 +122,7 @@ INSERT INTO caracteristica (nombre, padre_id) VALUES
 INSERT INTO caracteristica (nombre, padre_id) VALUES
                                                   ('Assertions', 15),
                                                   ('Test cases', 15);
+                                                  
+UPDATE usuario 
+SET clave = '$2a$10$AcI/atF/NJBpYKtVfRwpvuM6GR6gzd4X0RlnlIG8xA4miseMjVreu'
+WHERE correo = 'admin@bolsaempleo.local';

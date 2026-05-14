@@ -21,7 +21,6 @@ export function Navbar() {
                 width: "100%",
             }}>
 
-                {/* Izquierda — Bolsa de Empleo */}
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <Link className="brand" to="/">
                         💼 Bolsa de Empleo

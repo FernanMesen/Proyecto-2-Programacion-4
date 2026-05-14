@@ -112,7 +112,7 @@ export function MisHabilidadesPage() {
           </h2>
 
           {loading ? (
-            <Loading message="Cargando habilidades…" />
+            <Loading message="⏳Cargando habilidades…" />
           ) : habilidades.length === 0 ? (
             <p className="empty-state">No tenés habilidades registradas aún.</p>
           ) : (
