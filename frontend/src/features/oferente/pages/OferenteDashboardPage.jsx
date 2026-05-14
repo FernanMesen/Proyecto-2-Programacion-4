@@ -43,9 +43,9 @@ export function OferenteDashboardPage() {
       </div>
 
       <div className="actions">
-        <Link className="btn btn-primary" to="/buscar">🔍 Buscar puestos</Link>
-        <Link className="btn btn-secondary" to="/oferente/habilidades">⚙️ Mis habilidades</Link>
-        <Link className="btn btn-secondary" to="/oferente/cv">📄 Mi CV</Link>
+        <Link className="btn btn-primary" to="/buscar">Buscar puestos</Link>
+        <Link className="btn btn-secondary" to="/oferente/habilidades">Mis habilidades</Link>
+        <Link className="btn btn-secondary" to="/oferente/cv">Mi CV</Link>
       </div>
 
       {perfil && (

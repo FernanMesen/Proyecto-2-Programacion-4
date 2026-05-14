@@ -36,7 +36,7 @@ export function MiCVPage() {
 
   return (
     <main className="container" style={{ maxWidth: 520 }}>
-      <h1>📄 Mi CV</h1>
+      <h1>Mi CV</h1>
 
       <section className="card">
         <Alert type="success">{success}</Alert>
@@ -73,7 +73,7 @@ export function MiCVPage() {
           </div>
 
           <button type="submit" className="btn btn-primary" disabled={loading}>
-            {loading ? "Subiendo…" : "⬆️ Subir CV"}
+            {loading ? "Subiendo…" : "Subir CV"}
           </button>
         </form>
       </section>

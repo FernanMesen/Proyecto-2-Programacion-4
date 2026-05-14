@@ -57,7 +57,7 @@ export function BuscarCandidatosPage() {
 
   return (
     <main className="container">
-      <h1>🔍 Buscar Candidatos</h1>
+      <h1>Buscar Candidatos</h1>
 
       <section className="card">
         <form className="actions" onSubmit={handleBuscar} style={{ alignItems: "flex-end" }}>
@@ -133,7 +133,7 @@ export function BuscarCandidatosPage() {
       {detalle && (
         <div className="modal-overlay" onClick={() => setDetalle(null)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <h3>👤 {detalle.nombre}</h3>
+            <h3>{detalle.nombre}</h3>
             <div className="detail-grid" style={{ marginBottom: "1rem" }}>
               <p><strong>Correo:</strong> {detalle.correo}</p>
               <p><strong>Identificación:</strong> {detalle.identificacion}</p>
@@ -157,7 +157,7 @@ export function BuscarCandidatosPage() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  📄 Ver CV (PDF)
+                  Ver CV (PDF)
                 </a>
               </div>
             )}

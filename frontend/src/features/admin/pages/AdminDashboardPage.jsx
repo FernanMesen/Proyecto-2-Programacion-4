@@ -45,9 +45,9 @@ export function AdminDashboardPage() {
       </div>
 
       <div className="actions">
-        <Link className="btn btn-primary" to="/admin/empresas">🏢 Revisar empresas</Link>
-        <Link className="btn btn-primary" to="/admin/oferentes">👤 Revisar oferentes</Link>
-        <Link className="btn btn-secondary" to="/admin/caracteristicas">📂 Características</Link>
+        <Link className="btn btn-primary" to="/admin/empresas">Revisar empresas</Link>
+        <Link className="btn btn-primary" to="/admin/oferentes">Revisar oferentes</Link>
+        <Link className="btn btn-secondary" to="/admin/caracteristicas">Características</Link>
       </div>
     </main>
   );

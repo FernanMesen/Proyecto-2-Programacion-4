@@ -73,7 +73,7 @@ export function AdminOferentesPage() {
                                             className="btn btn-success btn-sm"
                                             onClick={() => handleAprobar(o)}
                                         >
-                                            ✅ Aprobar
+                                            Aprobar
                                         </button>
                                     </td>
                                 </tr>

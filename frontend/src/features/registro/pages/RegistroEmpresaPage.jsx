@@ -34,7 +34,7 @@ export function RegistroEmpresaPage() {
   return (
     <main className="container" style={{ maxWidth: 580 }}>
       <section className="card">
-        <h1>🏢 Registro de Empresa</h1>
+        <h1>Registro de Empresa</h1>
 
         <Alert type="error">{error}</Alert>
 

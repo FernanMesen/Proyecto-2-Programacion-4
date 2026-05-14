@@ -123,7 +123,7 @@ export function DetallePuestoPage() {
                   />
                 </div>
                 <button type="submit" className="btn btn-success" disabled={aplicando}>
-                  {aplicando ? "Enviando…" : "📤 Enviar aplicación"}
+                  {aplicando ? "Enviando…" : "Enviar aplicación"}
                 </button>
               </form>
             ) : isAuthenticated ? (

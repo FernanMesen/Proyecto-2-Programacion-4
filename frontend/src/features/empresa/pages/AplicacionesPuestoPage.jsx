@@ -34,7 +34,7 @@ export function AplicacionesPuestoPage() {
 
       <header className="page-header">
         <div>
-          <h1>📩 Aplicaciones recibidas</h1>
+          <h1>Aplicaciones recibidas</h1>
           {titulo && <p className="muted">Puesto: {titulo}</p>}
         </div>
       </header>

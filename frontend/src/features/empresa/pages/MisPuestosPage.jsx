@@ -68,17 +68,17 @@ export function MisPuestosPage() {
               )}
               <div className="actions" style={{ flexWrap: "wrap" }}>
                 <Link className="btn btn-primary btn-sm" to={`/empresa/candidatos?puestoId=${p.id}`}>
-                  🔍 Candidatos
+                  Candidatos
                 </Link>
                 <Link className="btn btn-secondary btn-sm" to={`/empresa/aplicaciones/${p.id}`}>
-                  📩 Aplicaciones
+                  Aplicaciones
                 </Link>
                 <button
                   type="button"
                   className={`btn btn-sm ${p.activo ? "btn-danger" : "btn-success"}`}
                   onClick={() => handleToggle(p)}
                 >
-                  {p.activo ? "🔴 Desactivar" : "🟢 Activar"}
+                  {p.activo ? "Desactivar" : "Activar"}
                 </button>
               </div>
             </div>

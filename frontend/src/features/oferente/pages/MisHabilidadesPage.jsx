@@ -68,7 +68,7 @@ export function MisHabilidadesPage() {
 
   return (
     <main className="container">
-      <h1>⚙️ Mis Habilidades</h1>
+      <h1>Mis Habilidades</h1>
 
       <div className="grid-2">
         <section className="card">

@@ -98,7 +98,7 @@ export function NuevoPuestoPage() {
             </div>
 
             <button type="submit" className="btn btn-success" disabled={loading}>
-              {loading ? "Publicando…" : "📤 Publicar Puesto"}
+              {loading ? "Publicando…" : "Publicar Puesto"}
             </button>
           </form>
         </section>
