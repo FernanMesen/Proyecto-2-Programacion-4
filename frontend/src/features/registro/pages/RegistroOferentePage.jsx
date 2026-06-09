@@ -35,7 +35,7 @@ export function RegistroOferentePage() {
   return (
     <main className="container" style={{ maxWidth: 580 }}>
       <section className="card">
-        <h1>👤 Registro de Oferente</h1>
+        <h1><><img src="https://img.icons8.com/ios-filled/50/4771a3/user.png" alt="" style={{width:24,height:24,verticalAlign:"middle",marginRight:8}} />Registro de Oferente</></h1>
 
         <Alert type="error">{error}</Alert>
 

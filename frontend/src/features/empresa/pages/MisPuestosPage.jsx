@@ -78,7 +78,11 @@ export function MisPuestosPage() {
                   className={`btn btn-sm ${p.activo ? "btn-danger" : "btn-success"}`}
                   onClick={() => handleToggle(p)}
                 >
-                  {p.activo ? "❌Desactivar" : "✅Activar"}
+                  {p.activo ? (
+                    <><img src="https://img.icons8.com/ios-filled/50/ffffff/close.png" alt="" style={{width:14,height:14,verticalAlign:"middle",marginRight:4}} />Desactivar</>
+                  ) : (
+                    <><img src="https://img.icons8.com/ios-filled/50/ffffff/checkmark.png" alt="" style={{width:14,height:14,verticalAlign:"middle",marginRight:4}} />Activar</>
+                  )}
                 </button>
               </div>
             </div>

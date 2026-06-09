@@ -5,6 +5,10 @@ import { Alert } from "../../../shared/components/Alert.jsx";
 import { getFriendlyErrorMessage } from "../../../shared/api/apiError.js";
 import { getPerfilEmpresa, getMisPuestos } from "../services/empresaService.js";
 
+const IC = ({ src, alt, size = 20 }) => (
+    <img src={src} alt={alt} style={{ width: size, height: size, verticalAlign: "middle", marginRight: 6 }} />
+);
+
 export function EmpresaDashboardPage() {
   const [perfil, setPerfil] = useState(null);
   const [puestos, setPuestos] = useState([]);
@@ -26,7 +30,10 @@ export function EmpresaDashboardPage() {
     <main className="container">
       <header className="page-header">
         <div>
-          <h1>👋 Bienvenida, {perfil?.nombre}</h1>
+          <h1>
+            <IC src="https://img.icons8.com/ios-filled/50/4771a3/company.png" alt="" size={28} />
+            Bienvenida, {perfil?.nombre}
+          </h1>
           <p className="muted">{perfil?.localizacion}</p>
         </div>
       </header>
@@ -49,9 +56,18 @@ export function EmpresaDashboardPage() {
       </div>
 
       <div className="actions">
-        <Link className="btn btn-primary" to="/empresa/puestos">📋 Mis puestos</Link>
-        <Link className="btn btn-success" to="/empresa/puestos/nuevo">➕ Publicar puesto</Link>
-        <Link className="btn btn-secondary" to="/empresa/candidatos">🔍 Buscar candidatos</Link>
+        <Link className="btn btn-primary" to="/empresa/puestos">
+          <IC src="https://img.icons8.com/ios-filled/50/ffffff/list.png" alt="" />
+          Mis puestos
+        </Link>
+        <Link className="btn btn-success" to="/empresa/puestos/nuevo">
+          <IC src="https://img.icons8.com/ios-filled/50/ffffff/plus-math.png" alt="" />
+          Publicar puesto
+        </Link>
+        <Link className="btn btn-secondary" to="/empresa/candidatos">
+          <IC src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="" />
+          Buscar candidatos
+        </Link>
       </div>
 
       {perfil && (

@@ -129,7 +129,12 @@ export function MisHabilidadesPage() {
                   {habilidades.map((h) => (
                     <tr key={h.id}>
                       <td>{h.rutaCompleta}</td>
-                      <td>{"⭐".repeat(h.nivel)} ({h.nivel}/5)</td>
+                      <td>
+                        {Array.from({length: h.nivel}).map((_, i) => (
+                          <img key={i} src="https://img.icons8.com/ios-filled/50/d97706/star.png" alt="★" style={{width:16,height:16,verticalAlign:"middle"}} />
+                        ))}
+                        {" "}({h.nivel}/5)
+                      </td>
                       <td>
                         <button
                           type="button"

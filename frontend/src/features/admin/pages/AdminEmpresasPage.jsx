@@ -36,7 +36,7 @@ export function AdminEmpresasPage() {
     return (
         <main className="container">
             <p><Link to="/admin/dashboard" className="btn btn-secondary btn-sm">← Volver al panel</Link></p>
-            <h1>🏢 Empresas pendientes de aprobación</h1>
+            <h1><><img src="https://img.icons8.com/ios-filled/50/4771a3/company.png" alt="" style={{width:24,height:24,verticalAlign:"middle",marginRight:8}} />Empresas pendientes de aprobación</></h1>
 
             <Alert type="success">{success}</Alert>
             <Alert type="error">{error}</Alert>

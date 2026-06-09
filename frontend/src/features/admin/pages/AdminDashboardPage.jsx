@@ -21,7 +21,7 @@ export function AdminDashboardPage() {
 
   return (
     <main className="container">
-      <h1>🛡️ Panel de Administración</h1>
+      <h1><><img src="https://img.icons8.com/ios-filled/50/4771a3/shield.png" alt="" style={{width:24,height:24,verticalAlign:"middle",marginRight:8}} />Panel de Administración</></h1>
 
       <Alert type="error">{error}</Alert>
 

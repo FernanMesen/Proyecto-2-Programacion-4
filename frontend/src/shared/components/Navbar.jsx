@@ -1,6 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../features/auth/context/AuthContext.jsx";
 
+const IC = ({ src, alt }) => (
+    <img src={src} alt={alt} style={{ width: 18, height: 18, verticalAlign: "middle", marginRight: 4 }} />
+);
+
 export function Navbar() {
     const { isAuthenticated, username, isAdmin, isEmpresa, isOferente, logout } = useAuth();
     const navigate = useNavigate();
@@ -23,7 +27,8 @@ export function Navbar() {
 
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <Link className="brand" to="/">
-                        💼 Bolsa de Empleo
+                        <IC src="https://img.icons8.com/ios-filled/50/ffffff/briefcase.png" alt="Bolsa de Empleo" />
+                        Bolsa de Empleo
                     </Link>
                 </div>
 
@@ -61,7 +66,8 @@ export function Navbar() {
                     {isAuthenticated ? (
                         <>
               <span>
-                👤 <strong>{username}</strong>
+                <IC src="https://img.icons8.com/ios-filled/50/ffffff/user.png" alt="Usuario" />
+                <strong>{username}</strong>
               </span>
                             <button type="button" className="btn btn-danger btn-sm" onClick={handleLogout}>
                                 Salir
@@ -78,10 +84,12 @@ export function Navbar() {
                   Registrar:
                 </span>
                                 <Link className="btn btn-secondary btn-sm" to="/registro/empresa">
-                                    🏢 Empresa
+                                    <IC src="https://img.icons8.com/ios-filled/50/000000/company.png" alt="Empresa" />
+                                    Empresa
                                 </Link>
                                 <Link className="btn btn-secondary btn-sm" to="/registro/oferente">
-                                    👤 Oferente
+                                    <IC src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="Oferente" />
+                                    Oferente
                                 </Link>
                             </div>
                             <Link className="btn btn-primary btn-sm" to="/login">

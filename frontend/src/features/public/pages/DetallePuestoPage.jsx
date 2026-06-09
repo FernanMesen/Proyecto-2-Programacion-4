@@ -123,7 +123,7 @@ export function DetallePuestoPage() {
                   />
                 </div>
                 <button type="submit" className="btn btn-success" disabled={aplicando}>
-                  {aplicando ? "Enviando…" : "✅ Enviar aplicación"}
+                  {aplicando ? "Enviando…" : <><img src="https://img.icons8.com/ios-filled/50/ffffff/checkmark.png" alt="" style={{width:14,height:14,verticalAlign:"middle",marginRight:4}} />Enviar aplicación</>}
                 </button>
               </form>
             ) : isAuthenticated ? (

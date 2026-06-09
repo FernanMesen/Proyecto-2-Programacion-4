@@ -5,6 +5,10 @@ import { Alert } from "../../../shared/components/Alert.jsx";
 import { getFriendlyErrorMessage } from "../../../shared/api/apiError.js";
 import { getPerfilOferente, getMisHabilidades } from "../services/oferenteService.js";
 
+const IC = ({ src, alt, size = 20 }) => (
+    <img src={src} alt={alt} style={{ width: size, height: size, verticalAlign: "middle", marginRight: 6 }} />
+);
+
 export function OferenteDashboardPage() {
   const [perfil, setPerfil] = useState(null);
   const [habilidades, setHabilidades] = useState([]);
@@ -24,7 +28,10 @@ export function OferenteDashboardPage() {
     <main className="container">
       <header className="page-header">
         <div>
-          <h1>👤 Bienvenido/a, {perfil?.nombre} {perfil?.primerApellido}</h1>
+          <h1>
+            <IC src="https://img.icons8.com/ios-filled/50/4771a3/user.png" alt="" size={28} />
+            Bienvenido/a, {perfil?.nombre} {perfil?.primerApellido}
+          </h1>
           <p className="muted">{perfil?.correo}</p>
         </div>
       </header>
@@ -37,7 +44,12 @@ export function OferenteDashboardPage() {
           <div className="lbl">Habilidades registradas</div>
         </div>
         <div className="stat-card">
-          <div className="num">{perfil?.cvPath ? "✅" : "❌"}</div>
+          <div className="num">
+            {perfil?.cvPath
+              ? <img src="https://img.icons8.com/ios-filled/50/16a34a/checkmark.png" alt="Sí" style={{ width: 32, height: 32 }} />
+              : <img src="https://img.icons8.com/ios-filled/50/dc2626/close.png" alt="No" style={{ width: 32, height: 32 }} />
+            }
+          </div>
           <div className="lbl">CV subido</div>
         </div>
       </div>
@@ -45,7 +57,10 @@ export function OferenteDashboardPage() {
       <div className="actions">
         <Link className="btn btn-primary" to="/buscar">Buscar puestos</Link>
         <Link className="btn btn-secondary" to="/oferente/habilidades">Mis habilidades</Link>
-        <Link className="btn btn-secondary" to="/oferente/cv">📄Mi CV</Link>
+        <Link className="btn btn-secondary" to="/oferente/cv">
+          <IC src="https://img.icons8.com/ios-filled/50/000000/resume.png" alt="" />
+          Mi CV
+        </Link>
       </div>
 
       {perfil && (
