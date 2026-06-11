@@ -49,21 +49,25 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            .csrf(csrf -> csrf.disable())
-            .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
-                .requestMatchers(HttpMethod.POST, "/api/auth/registro/**").permitAll()
-                .requestMatchers(HttpMethod.GET,  "/api/public/**").permitAll()
-                .requestMatchers(HttpMethod.GET,  "/api/cv/**").permitAll()
-                .requestMatchers("/api/empresa/**").hasRole("EMPRESA")
-                .requestMatchers("/api/oferente/**").hasRole("OFERENTE")
-                .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                .requestMatchers("/", "/index.html", "/assets/**", "/favicon.ico").permitAll()
-                .anyRequest().authenticated()
-            )
-            .authenticationProvider(authProvider())
-            .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+                .csrf(csrf -> csrf.disable())
+                .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/auth/registro/**").permitAll()
+                        .requestMatchers(HttpMethod.GET,  "/api/public/**").permitAll()
+                        .requestMatchers(HttpMethod.GET,  "/api/cv/**").permitAll()
+                        .requestMatchers("/api/empresa/**").hasRole("EMPRESA")
+                        .requestMatchers("/api/oferente/**").hasRole("OFERENTE")
+                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                        .requestMatchers(
+                                "/", "/index.html", "/assets/**", "/favicon.ico",
+                                "/login", "/buscar", "/puesto/**", "/registro/**",
+                                "/empresa/**", "/oferente/**", "/admin/**"
+                        ).permitAll()
+                        .anyRequest().authenticated()
+                )
+                .authenticationProvider(authProvider())
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
