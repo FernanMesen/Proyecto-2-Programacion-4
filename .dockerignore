@@ -1,0 +1,10 @@
+**/node_modules
+**/dist
+**/target
+**/.idea
+**/.git
+**/uploads
+*.md
+.dockerignore
+Dockerfile
+render.yaml

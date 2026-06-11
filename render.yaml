@@ -1,0 +1,44 @@
+databases:
+  - name: bolsa-empleo-db
+    plan: free
+    databaseName: bolsa_empleo
+    user: bolsa_empleo_user
+
+services:
+  - type: web
+    name: bolsa-empleo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: bolsa-empleo-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: bolsa-empleo-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: bolsa-empleo-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: bolsa-empleo-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: bolsa-empleo-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRATION
+        value: "86400000"
+      - key: CV_UPLOAD_DIR
+        value: ./uploads/cv
+    # disk:
+    #   name: cv-uploads
+    #   mountPath: /app/uploads
+    #   sizeGB: 1
