@@ -143,7 +143,12 @@ public class EmpresaApiController {
             m.put("mensaje", a.getMensaje());
             m.put("fechaAplicacion", a.getFechaAplicacion());
             m.put("esOferente", a.getOferente() != null);
-            if (a.getOferente() != null) m.put("oferenteId", a.getOferente().getId());
+            if (a.getOferente() != null) {
+                m.put("oferenteId", a.getOferente().getId());
+                m.put("cvPath", a.getOferente().getCvPath());
+            } else {
+                m.put("cvPath", a.getCvInvitado());
+            }
             return m;
         }).collect(Collectors.toList()));
     }
